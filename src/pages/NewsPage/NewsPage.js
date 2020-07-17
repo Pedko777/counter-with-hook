@@ -8,10 +8,12 @@ class NewsPage extends Component {
   };
 
   componentDidMount() {
-    getNews().then(data => {
+    getNews()
+      .then(data => {
         // console.log(data.articles)
         this.setState({ listNews: data.articles });
-      }).catch(error => console.log(error));
+      })
+      .catch(error => console.log(error));
   }
 
   render() {
